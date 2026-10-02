@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCenter - Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="logo">AUTOFIX</div>
+
+        <div class="user-area">
+            <span>Usuário: <strong id="nomeUsuario"></strong></span>
+            <button id="logout">Sair</button>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h1>Dashboard</h1>
+            <p>Bem-vindo ao sistema de gestão da oficina.</p>
+        </section>
+
+        <section class="cards">
+
+            <div class="card">
+                <span class="card-title">Clientes</span>
+                <strong id="totalClientes">0</strong>
+                <a href="Cliente.html">Gerenciar →</a>
+            </div>
+
+            <div class="card">
+                <span class="card-title">Veículos</span>
+                <strong id="totalVeiculos">0</strong>
+                <a href="veiculos.html">Gerenciar →</a>
+            </div>
+
+            <div class="card">
+                <span class="card-title">Ordens de Serviço</span>
+                <strong id="totalOS">0</strong>
+                <a href="os.html">Gerenciar →</a>
+            </div>
+
+        </section>
+
+        <section class="modules">
+
+            <h2>Módulos do Sistema</h2>
+
+            <div class="module-grid">
+
+                <a href="clientes/clientes.html" class="module">
+                    <div class="module-icon">01</div>
+                    <h3>Clientes</h3>
+                    <p>Cadastro e gerenciamento de clientes.</p>
+                </a>
+
+                <a href="veiculos/veiculos.html" class="module">
+                    <div class="module-icon">02</div>
+                    <h3>Veículos</h3>
+                    <p>Cadastro e gerenciamento dos veículos.</p>
+                </a>
+
+                <a href="ordens/ordens.html" class="module">
+                    <div class="module-icon">03</div>
+                    <h3>Ordens de Serviço</h3>
+                    <p>Controle das manutenções e serviços.</p>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="dash.js"></script>
+</body>
+</html>

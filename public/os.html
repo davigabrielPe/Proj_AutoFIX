@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ordens de Serviço - Autofix</title>
+
+    <link rel="stylesheet" href="ordens.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        AUTOFIX
+    </div>
+
+    <nav>
+        <a href="../index.html">Dashboard</a>
+        <a href="../clientes/clientes.html">Clientes</a>
+        <a href="../veiculos/veiculos.html">Veículos</a>
+    </nav>
+
+</header>
+
+<main class="container">
+
+    <div class="page-header">
+
+        <div>
+            <h1>Ordens de Serviço</h1>
+            <p>Controle das manutenções realizadas.</p>
+        </div>
+
+        <button class="btn-primary" id="novaOS">
+            + Nova OS
+        </button>
+
+    </div>
+
+    <section class="form-container" id="formContainer">
+
+        <h2 id="formTitle">Nova Ordem de Serviço</h2>
+
+        <form id="osForm">
+
+            <input type="hidden" id="osId">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>Cliente</label>
+
+                    <select id="clienteId" required>
+                        <option value="">
+                            Selecione um cliente
+                        </option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Veículo</label>
+
+                    <select id="veiculoId" required>
+                        <option value="">
+                            Selecione um veículo
+                        </option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Data da manutenção</label>
+
+                    <input
+                        type="date"
+                        id="data"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Status</label>
+
+                    <select id="status" required>
+
+                        <option value="Aberta">
+                            Aberta
+                        </option>
+
+                        <option value="Em andamento">
+                            Em andamento
+                        </option>
+
+                        <option value="Concluída">
+                            Concluída
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group full">
+
+                    <label>Descrição do serviço</label>
+
+                    <textarea
+                        id="descricao"
+                        rows="4"
+                        required
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+            <div class="form-actions">
+
+                <button type="submit" class="btn-primary">
+                    Salvar
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-secondary"
+                    id="cancelar">
+                    Cancelar
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+    <section class="list-container">
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>OS</th>
+                        <th>Data</th>
+                        <th>Cliente</th>
+                        <th>Veículo</th>
+                        <th>Serviço</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="listaOS"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="ordens.js"></script>
+
+</body>
+</html>

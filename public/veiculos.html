@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Veículos - AutoFIX</title>
+
+    <link rel="stylesheet" href="veiculos.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        AUTOFIX
+    </div>
+
+    <nav>
+        <a href="../index.html">Dashboard</a>
+        <a href="../clientes/clientes.html">Clientes</a>
+        <a href="../ordens/ordens.html">OS</a>
+    </nav>
+
+</header>
+
+<main class="container">
+
+    <div class="page-header">
+
+        <div>
+            <h1>Veículos</h1>
+            <p>Gerenciamento de veículos cadastrados.</p>
+        </div>
+
+        <button class="btn-primary" id="novoVeiculo">
+            + Novo Veículo
+        </button>
+
+    </div>
+
+    <section class="form-container" id="formContainer">
+
+        <h2 id="formTitle">Novo Veículo</h2>
+
+        <form id="veiculoForm">
+
+            <input type="hidden" id="veiculoId">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Placa</label>
+                    <input type="text" id="placa" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Marca</label>
+                    <input type="text" id="marca" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Modelo</label>
+                    <input type="text" id="modelo" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Ano</label>
+                    <input type="number" id="ano" required>
+                </div>
+
+                <div class="form-group">
+
+                    <label>Cliente proprietário</label>
+
+                    <select id="clienteId" required>
+                        <option value="">Selecione um cliente</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="form-actions">
+
+                <button type="submit" class="btn-primary">
+                    Salvar
+                </button>
+
+                <button type="button" class="btn-secondary" id="cancelar">
+                    Cancelar
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+    <section class="list-container">
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Placa</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Ano</th>
+                        <th>Cliente</th>
+                        <th>Ações</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="listaVeiculos"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="veiculos.js"></script>
+
+</body>
+</html>
